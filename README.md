@@ -9,6 +9,8 @@ sequenceDiagram
 
     Client_1 Client_2->>Server: Make a type of request
     Server-->>Client_1 Client_2: Treat the type of requests.
+    Server-->>Client_1 Client_2: Answers the type of requests.
+
 ```
 
 
