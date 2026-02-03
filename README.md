@@ -12,11 +12,15 @@ sequenceDiagram
 ```
 
 ```mermaid
-<diagram-type>
-    <diagram code>
-```
+sequenceDiagram
+Fred->>Jill:Hello my Snookums
+note over Fred:True Love
+Jill->>Fred:Oh my Darling!
+note over Jill:True Love Returned
 
-
+%%{init:{'theme':'forest'}}%%
+%%{init:{'themeCSS':'.messageLine0:nth-of-type(2) { stroke: red; };.messageText:nth-of-type(1) { fill: green; font-size: 30px !important;}; g:nth-of-type(3) rect.actor { stroke:blue;fill: pink; }; g:nth-of-type(5) .note { stroke:blue;fill: crimson; };#arrowhead path {stroke: blue; fill:red;};'}}%%
+ ```
 
 ## Etape 1 : Traduction du C en Java
 
