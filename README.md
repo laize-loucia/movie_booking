@@ -8,9 +8,9 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 sequenceDiagram
     participant Client
     participant Server
-    Client->>Server: Make request
+    Client->>Server: Make a type of request
     activate Server
-    Server-->>Client: User already exists.
+    Server-->>Client: Respond according to the request type.
     deactivate Server
 
 ```
