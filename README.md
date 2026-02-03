@@ -19,7 +19,9 @@ sequenceDiagram
 
 
 ```mermaid
+title: Order example
 sequenceDiagram
+
     participant Client
     participant Server
     Client->>Server:  Display the places left
