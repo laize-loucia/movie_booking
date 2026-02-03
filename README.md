@@ -5,8 +5,8 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 ```mermaid
 sequenceDiagram
 
-    Client_1 Client_2->>Server: Make a type of request
-    Server-->>Client_1 Client_2: Answers the type of request.
+    Client_1 Client_2->>Server: Fait une requête typée (consultation, réservation)
+    Server-->>Client_1 Client_2: Réponds selon le type de requête.
 ```
 
 ```mermaid
