@@ -5,8 +5,13 @@
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
 ```mermaid
+client||--||serveur : label
+```
+
+
+```mermaid
 sequenceDiagram
-    Client_1 || Client_2 -->> Server: Make a type of request
+    Client_1 Client_2 -->> Server: Make a type of request
 ```
 
 
