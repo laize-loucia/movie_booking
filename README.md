@@ -2,6 +2,23 @@
 
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
+```mermaid
+sequenceDiagram
+
+    Client_1 Client_2->>Server: Make a type of request
+    Server-->>Client_1 Client_2: Answers the type of request.
+```
+
+```mermaid
+sequenceDiagram
+Fred->>Jill:Hello my Snookums
+note over Fred:True Love
+Jill->>Fred:Oh my Darling!
+note over Jill:True Love Returned
+
+%%{init:{'theme':'forest'}}%%
+%%{init:{'themeCSS':'.messageLine0:nth-of-type(2) { stroke: red; };.messageText:nth-of-type(1) { fill: green; font-size: 30px !important;}; g:nth-of-type(3) rect.actor { stroke:blue;fill: pink; }; g:nth-of-type(5) .note { stroke:blue;fill: crimson; };#arrowhead path {stroke: blue; fill:red;};'}}%%
+ ```
 
 ## Contexte :
 
@@ -22,46 +39,18 @@ Stack simple et propre :
 
 
 Pas forcément de DB au début (ou H2)
-3️⃣ Hébergement gratuit (facile)
-Les 3 bons choix :
+- Hébergement (Render / / ) 
+Très simple
+Supporte Spring Boot 👉 le plus recommandé pour toi
+🟡 Railway (
 
+- Fly.io (Très bon mais quotas)
 
-```mermaid
-sequenceDiagram
-
-    Client_1 Client_2->>Server: Make a type of request
-    Server-->>Client_1 Client_2: Answers the type of request.
-```
-
-```mermaid
-sequenceDiagram
-Fred->>Jill:Hello my Snookums
-note over Fred:True Love
-Jill->>Fred:Oh my Darling!
-note over Jill:True Love Returned
-
-%%{init:{'theme':'forest'}}%%
-%%{init:{'themeCSS':'.messageLine0:nth-of-type(2) { stroke: red; };.messageText:nth-of-type(1) { fill: green; font-size: 30px !important;}; g:nth-of-type(3) rect.actor { stroke:blue;fill: pink; }; g:nth-of-type(5) .note { stroke:blue;fill: crimson; };#arrowhead path {stroke: blue; fill:red;};'}}%%
- ```
 
 ## Etape 1 : Traduction du C en Java
 
 
 ## use cases
-
-
-```mermaid
-title: Order example
-sequenceDiagram
-
-    participant Client
-    participant Server
-    Client->>Server:  Display the places left
-    activate Server
-    Server-->>Client: User already exists.
-    deactivate Server
-
-```
 
 
 ```mermaid
@@ -109,13 +98,6 @@ sequenceDiagram
     Server-->>-Client: HTTP 200 OK (Connection Closed)
 
 ```
-Gratuit
-Très simple
-Supporte Spring Boot 👉 le plus recommandé pour toi
-🟡 Railway
-
-Très bon mais quotas serrés
-🟡 Fly.io
 
 Plus “systèmes”, un peu plus technique (bien vu pour ton profil)
 ➡️ Render + Docker = énorme bonus DevOps.
