@@ -10,9 +10,8 @@ sequenceDiagram
     participant Client
     participant Server
     Client->>Server:  Display the places left
-    activate Server
-    Server-->>Client: User already exists.
-    deactivate Server
+    Client<<-Server:  Display the places left
+
 
 ```
 
