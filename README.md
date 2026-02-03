@@ -9,7 +9,7 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 sequenceDiagram
     Client
     Server
-    Client->>Server: Make a reservation. 
+    Client->>Server: Make a reservation
     activate Server
     Server-->>Client: Display the places left.
     if not then display No more reservation possible for this movie.
