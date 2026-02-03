@@ -12,7 +12,7 @@ erDiagram
 ```
 
 ```mermaid
-sequenceDiagram
+erDiagram
     Client_1 Client_2 -->> Server: Make a type of request
 ```
 
