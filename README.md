@@ -5,6 +5,7 @@
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
 ```mermaid
+sequenceDiagram
 client||--||serveur : label
 ```
 
