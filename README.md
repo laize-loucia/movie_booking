@@ -5,15 +5,10 @@
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
 ```mermaid
-erDiagram
-    Client
-    Serveur 
-    Client -->> Server: Make a type of request
-```
-
-```mermaid
-erDiagram
+seqequenceDiagram
     Client_1 Client_2 -->> Server: Make a type of request
+    Server-->>Client: treat the type of requests.
+    Server-->>Client: answer the type of request.
 ```
 
 
