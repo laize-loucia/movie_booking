@@ -78,6 +78,7 @@ sequenceDiagram
     Note over Server: Clean up resources
     Server-->>-Client: HTTP 200 OK (Connection Closed)
 
+```
 
 
 ## Sources
