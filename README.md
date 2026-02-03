@@ -6,9 +6,9 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 
 ```mermaid
 erDiagram
-    CLIENT
-    SERVEUR 
-    CLIENT -->|| SERVEUR
+    Client
+    Serveur 
+    Client -->|| Serveur
 ```
 
 ```mermaid
