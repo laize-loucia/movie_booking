@@ -10,7 +10,8 @@ sequenceDiagram
     participant Client
     participant Server
     Client->>Server:  Make a consultation
-    Client<<-Server:  Display the movies list
+    wait
+    Server-->Client:  Display the movies list
     wait for oter requests
 
 ```
