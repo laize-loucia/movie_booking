@@ -4,15 +4,14 @@
 
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
-
 ```mermaid
 sequenceDiagram
     participant Client
     participant Server
-    Client->>Server:  Make a consultation
-    wait
-    Server-->Client:  Display the movies list
-    wait for oter requests
+    Client->>Server: Make request
+    activate Server
+    Server-->>Client: User already exists.
+    deactivate Server
 
 ```
 
