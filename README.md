@@ -8,7 +8,7 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 erDiagram
     Client
     Serveur 
-    Client -->|| Serveur
+    Client -->> Server: Make a type of request
 ```
 
 ```mermaid
