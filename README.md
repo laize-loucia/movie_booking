@@ -1,7 +1,11 @@
+## Projet
+
+Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
+
 
 ## Contexte :
 
-Durant notre licence en informatique, notre projet initial à était écrit en langage en C, exécuté en ligne de commande. 
+Durant notre licence en informatique, j'ai écrit ce projet en langage en C, exécuté en ligne de commande. 
 J'ai repris ce projet en Java Spring Boot pour exposer le service via API REST et le déploier une vraie plateformer afin de le tester en condititon réelle.
 
 ## Outils 
@@ -21,9 +25,6 @@ Pas forcément de DB au début (ou H2)
 3️⃣ Hébergement gratuit (facile)
 Les 3 bons choix :
 
-## Projet
-
-Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
 ```mermaid
 sequenceDiagram
