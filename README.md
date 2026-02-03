@@ -8,7 +8,7 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 sequenceDiagram
 
     Client_1 Client_2->>Server: Make a type of request
-    Server --Treat the type of requests.
+    Server->>Treat the type of requests.
     Server-->>Client_1 Client_2: Answers the type of requests.
 
 ```
