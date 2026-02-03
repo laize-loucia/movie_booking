@@ -35,6 +35,7 @@ sequenceDiagram
 ```
 
 
+```mermaid
 sequenceDiagram
     participant Client as MCP Client
     participant Server as MCP Server
