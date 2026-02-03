@@ -9,9 +9,7 @@ sequenceDiagram
     participant Client
     participant Server
     Client->>Server: Make a type of request
-    activate Server
     Server-->>Client: Respond according to the request type.
-    deactivate Server
 
 ```
 
