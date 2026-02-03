@@ -1,6 +1,27 @@
 
-## Contexte du projet :
+## Contexte :
 
+Durant notre licence en informatique, notre projet initial à était écrit en langage en C, exécuté en ligne de commande. 
+J'ai repris ce projet en Java Spring Boot pour exposer le service via API REST et le déploier une vraie plateformer afin de le tester en condititon réelle.
+
+## Outils 
+Le C montre les bases bas niveau (sockets, mémoire, protocole).
+Le Java montre que tu sais industrialiser un service réseau. 👉 Présente ça comme : « même logique protocolaire, autre stack, plus orientée production ».
+
+
+- Java 17
+- Spring Boot
+- API REST (consultation / réservation)
+- Spring Boot (meilleur pour le web)
+- architecture, API REST, config propre
+Stack simple et propre :
+
+
+Pas forcément de DB au début (ou H2)
+3️⃣ Hébergement gratuit (facile)
+Les 3 bons choix :
+
+## Projet
 
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
@@ -87,6 +108,40 @@ sequenceDiagram
     Server-->>-Client: HTTP 200 OK (Connection Closed)
 
 ```
+Gratuit
+Très simple
+Supporte Spring Boot 👉 le plus recommandé pour toi
+🟡 Railway
+
+Très bon mais quotas serrés
+🟡 Fly.io
+
+Plus “systèmes”, un peu plus technique (bien vu pour ton profil)
+➡️ Render + Docker = énorme bonus DevOps.
+
+4️⃣ Ce que ça montre pour les masters
+Ça coche EXACTEMENT leurs attentes :
+
+Réseau (client/serveur)
+Systèmes (C)
+Architecture applicative (Spring)
+Déploiement (Docker + hébergeur)
+Démarche personnelle (très apprécié)
+👉 Dans ton dossier :
+
+« Projet initial en C (client/serveur). Reprise volontaire en Java Spring Boot pour exposer le service via API REST et déploiement sur plateforme cloud. »
+
+
+➡️ Fais-le en 2 étapes
+
+### Etape 1 : Java Spring Boot local
+
+
+
+### Etape 2 : Déploiement Render (+ Docker si possible)
+
+l’architecture exacte
+le plan de repo GitHub
 
 
 ## Sources
