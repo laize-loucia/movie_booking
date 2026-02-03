@@ -148,3 +148,5 @@ le plan de repo GitHub
 ## Sources
 
 https://www.freecodecamp.org/news/diagrams-as-code-with-mermaid-github-and-vs-code/
+https://github.com/mermaid-js/mermaid/blob/develop/docs/syntax/entityRelationshipDiagram.md
+https://github.com/mermaid-js/mermaid/blob/develop/README.md
