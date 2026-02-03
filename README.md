@@ -11,7 +11,7 @@ sequenceDiagram
     Server
     Client->>Server: Make a reservation. 
     activate Server
-    Server-->>Client: Display the places left
+    Server-->>Client: Display the places left.
     if not then display No more reservation possible for this movie.
     deactivate Server
 
