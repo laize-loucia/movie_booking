@@ -8,8 +8,7 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 erDiagram
     CLIENT
     SERVEUR 
-    CLIENT->|| SEVREUR
-
+    CLIENT -->|| SEVREUR
 ```
 
 ```mermaid
