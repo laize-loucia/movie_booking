@@ -6,7 +6,7 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 
 ```mermaid
 sequenceDiagram
-client||--||serveur : label
+client--serveur : label
 ```
 
 
