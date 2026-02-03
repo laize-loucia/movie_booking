@@ -7,12 +7,11 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 
 ```mermaid
 sequenceDiagram
-    Client
-    Server
-    Client->>Server: Make a reservation
+    participant Client
+    participant Server
+    Client->>Server:  Display the places left
     activate Server
-    Server-->>Client: Display the places left.
-    if not then display No more reservation possible for this movie.
+    Server-->>Client: User already exists.
     deactivate Server
 
 ```
@@ -23,17 +22,17 @@ sequenceDiagram
 
 ## use cases
 
+
 ```mermaid
 sequenceDiagram
-    Client
-    Server
-    Client->>Server: Register user
+    participant Client
+    participant Server
+    Client->>Server:  Display the places left
     activate Server
     Server-->>Client: User already exists.
     deactivate Server
 
 ```
-
 
 
 ## Sources
