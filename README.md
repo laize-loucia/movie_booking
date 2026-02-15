@@ -53,7 +53,7 @@ Supporte Spring Boot 👉 le plus recommandé pour toi
 
 
 
-## Etape 2 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
+## Etape 1 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
 
 
 ## Etape 2 : Implémentation des threads
@@ -72,6 +72,10 @@ Ici, nous n'avons pas eu besoin de copie; En effet, chaque fichier a directement
 
 
 Inconvénient : nécessite synchronisation (sémaphores).
+
+
+## Etape 4 : Manipulation des threads
+
 
 ## use cases
 
