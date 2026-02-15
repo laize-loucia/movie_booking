@@ -74,7 +74,7 @@ Ici, nous n'avons pas eu besoin de copie; En effet, chaque fichier a directement
 Inconvénient : nécessite synchronisation (sémaphores).
 
 
-## Etape 4 : Manipulation des threads
+## Etape 4 : Synchronisation des threads
 
 
 ## use cases
