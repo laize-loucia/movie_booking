@@ -22,11 +22,13 @@ note over Jill:True Love Returned
 
 ## Contexte :
 
-Durant notre licence en informatique, j'ai écrit ce projet en langage en C, exécuté en ligne de commande. 
-J'ai repris ce projet en Java Spring Boot pour exposer le service via API REST et le déploier une vraie plateformer afin de le tester en condititon réelle.
+Durant notre licence en informatique, nous avons réalisé en binôme ce projet en langage en C, exécuté en ligne de commande. 
+
 
 ## Outils 
 Le C montre les bases bas niveau (sockets, mémoire, protocole).
+
+
 Le Java montre que tu sais industrialiser un service réseau. 👉 Présente ça comme : « même logique protocolaire, autre stack, plus orientée production ».
 
 
@@ -49,6 +51,27 @@ Supporte Spring Boot 👉 le plus recommandé pour toi
 
 ## Etape 1 : Traduction du C en Java
 
+
+
+## Etape 2 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
+
+
+## Etape 2 : Implémentation des threads
+
+
+Après avoir mise en place ue communication inter-processus par tubes avec des processus lourds, nous avons utilisées des threads pour répondre
+à de nouvelles contraintes du cahier des charges de l'exercice.
+
+L'avantage des threads est en effet la mémoire partagée qui permet aux processus de commmuniquer directement et rapidement sans objets complexes.
+Cela nou a permis de simplifier l'échange de données par rapport à la première implémentation et première version que nous avions avec un échange avec un client et un serveur fils et père échangeant avec les tubes.
+
+Ici, nous n'avons pas eu besoin de copie; En effet, chaque fichier a directement pris un rôle de client et de serveur en envoyant et réceptionnant les données dans une **communication bidirectionnelle**.
+
+
+## Etape 3 : Manipulation des threads
+
+
+Inconvénient : nécessite synchronisation (sémaphores).
 
 ## use cases
 
@@ -125,6 +148,10 @@ Démarche personnelle (très apprécié)
 
 l’architecture exacte
 le plan de repo GitHub
+
+
+### COnclusion
+J'ai repris ce projet en Java Spring Boot pour exposer le service via API REST et le déploier une vraie plateformer afin de le tester en condititon réelle.
 
 
 ## Sources
