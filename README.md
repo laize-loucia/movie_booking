@@ -49,13 +49,40 @@ Supporte Spring Boot 👉 le plus recommandé pour toi
 - Fly.io (Très bon mais quotas)
 
 
-## Etape 1 : Traduction du C en Java
-
-
 
 ## Etape 1 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
 
+```mermaid
 
+sequenceDiagram
+    participant C as Client (Fils)
+    participant S as Serveur (Père)
+    
+    Note over C,S: Initialisation: pipe() + fork()
+    
+    Note right of C: Menu & Saisie ID
+    C->>S: write(p1[1], &choix) [ID Spectacle]
+    S->>S: read(p1[0]) & Recherche places
+    S->>C: write(p2[1], &nb_places) [Disponibilité]
+    
+    Note right of C: Saisie Réservation (ID + Quantité)
+    C->>S: write(p1[1], &res)
+    C->>S: write(p1[1], &nbp)
+    
+    alt Places suffisantes
+        S->>S: Mise à jour tableau (nb_places -= nbp)
+        S->>C: write(p2[1], "SUCCES")
+    else Places insuffisantes
+        S->>C: write(p2[1], "ECHEC")
+    end
+    
+    Note over C: close() & exit()
+    S->>S: wait(NULL)
+    Note over S: close() & exit()
+```
+
+
+    
 ## Etape 2 : Implémentation des threads
 
 
