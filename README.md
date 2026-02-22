@@ -3,6 +3,56 @@
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
 
 ```mermaid
+flowchart TB
+
+Client1 -->|requete type 10| MSQ
+Client2 -->|requete type 11| MSQ
+Client3 -->|requete type 11| MSQ
+
+MSQ --> Serveur
+
+Serveur -->|pthread_create| Thread1
+Serveur -->|pthread_create| Thread2
+Serveur -->|pthread_create| Thread3
+
+Thread1 -->|sem_wait| SEM
+Thread2 -->|attend si SEM=0| SEM
+Thread3 -->|attend si SEM=0| SEM
+
+SEM --> places
+places --> SEM
+
+Thread1 -->|sem_post| SEM
+Thread2 -->|sem_post| SEM
+Thread3 -->|sem_post| SEM
+
+Thread1 -->|reponse pid| MSQ
+Thread2 -->|reponse pid| MSQ
+Thread3 -->|reponse pid| MSQ
+
+MSQ --> Clients
+```
+
+
+
+```mermaid
+sequenceDiagram
+participant ClientA
+participant Serveur
+participant ThreadA
+participant SEM
+participant Base
+
+ClientA->>Serveur: requete
+Serveur->>ThreadA: pthread_create
+ThreadA->>SEM: sem_wait()
+SEM-->>ThreadA: accès autorisé
+ThreadA->>Base: lecture/modification places[]
+ThreadA->>SEM: sem_post()
+ThreadA->>Serveur: envoie réponse
+Serveur->>ClientA: réponse
+```
+```mermaid
 flowchart LR
 
     %% Clients
