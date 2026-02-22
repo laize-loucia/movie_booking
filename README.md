@@ -1,6 +1,7 @@
 ## Projet
 
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
+
 ```mermaid
 flowchart LR
 
@@ -37,6 +38,7 @@ flowchart LR
 
     MSQ --> C1
     MSQ --> C2
+
 ```
     
 ```mermaid
