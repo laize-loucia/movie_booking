@@ -1,7 +1,44 @@
 ## Projet
 
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
+```mermaid
+flowchart LR
 
+    %% Clients
+    C1[Client 1\n(pid = 1234)]
+    C2[Client 2\n(pid = 5678)]
+
+    %% File de messages
+    MSQ[(Message Queue\nclé = 12)]
+
+    %% Serveur (processus)
+    subgraph SERVEUR [Processus Serveur]
+        direction TB
+        T1[Thread Consultation\nmsgrcv type = 11]
+        T2[Thread Réservation\nmsgrcv type = 2]
+        DATA[Tableau places[3]\n{50,30,20}]
+    end
+
+    %% Envois vers MSQ
+    C1 -- requête consultation\n(type 11) --> MSQ
+    C2 -- requête réservation\n(type 2) --> MSQ
+
+    %% MSQ vers threads
+    MSQ -- type 11 --> T1
+    MSQ -- type 2 --> T2
+
+    %% Accès aux données partagées
+    T1 --> DATA
+    T2 --> DATA
+
+    %% Réponses
+    T1 -- réponse\n(type = pid client) --> MSQ
+    T2 -- réponse\n(type = pid client) --> MSQ
+
+    MSQ --> C1
+    MSQ --> C2
+```
+    
 ```mermaid
 sequenceDiagram
 
