@@ -14,6 +14,13 @@ sequenceDiagram
     Server-->>Client_1 Client_2: Répond à la requête
 ```
 
+# Commandes
+
+``` gcc serveur.c -o serveur ```
+
+```gcc serveur.c -o serveur```
+```gcc client.c -o client```
+
 
 # Communication par Tubes Anonymes
 
