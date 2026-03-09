@@ -5,6 +5,16 @@ Durant notre licence en informatique, nous avons réalisé en binôme ce projet 
 Nous avons utilisé 3 outils de communication différents ce qui nous a permis de comprendre et prendre du recul sur quels mécanismes mettre en oeuvre lors des interactions clients serveurs selon les situations.
 &nbsp;
 
+Chacunes des versions repose sur le modèle suivant :
+
+```mermaid
+sequenceDiagram
+
+    Client_1 Client_2->>Server: Envoi une requête (consultation, réservation)
+    Server-->>Client_1 Client_2: Répond à la requête
+```
+
+
 # Communcation par Tubes Anonymes
 
 ## Etape 1 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
@@ -134,12 +144,6 @@ flowchart LR
 
 ```
     
-```mermaid
-sequenceDiagram
-
-    Client_1 Client_2->>Server: Envoi une requête (consultation, réservation)
-    Server-->>Client_1 Client_2: Répond à la requête
-```
 
 ```mermaid
 graph LR
