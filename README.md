@@ -16,10 +16,11 @@ sequenceDiagram
 
 # Commandes
 
+
+
 ``` gcc serveur.c -o serveur ```
 
-```gcc serveur.c -o serveur```
-```gcc client.c -o client```
+```./serveur```
 
 
 # Communication par Tubes Anonymes
