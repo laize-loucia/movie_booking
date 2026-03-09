@@ -1,6 +1,38 @@
 ## Projet
 
+Durant notre licence en informatique, nous avons réalisé en binôme ce projet en langage en C, exécuté en ligne de commande. 
+
+
+
+
+# Communcation par Tubes Anonymes
+
+## Etape 1 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
+
+
+```mermaid
+
+sequenceDiagram
+    participant C as Client (Fils)
+    participant S as Serveur (Père)
+    C->>S: ID Spectacle (Consultation)
+    S->>C: Nb Places restantes
+    C->>S: ID + Nb Places (Réservation)
+    Note over S: Mise à jour tableau
+    S->>C: Statut (SUCCES/ECHEC)
+```
 Communication interprocessus entre un client et un serveur simple pour accomplir des tâches de consultation et de réservation.
+
+
+# Communcation par Files de Messages 
+
+
+
+# Communcation multithread avec Files de Messages 
+
+
+
+# Communcation multithread verrouillée par un Sémaphore
 
 ```mermaid
 flowchart TB
@@ -133,50 +165,6 @@ graph LR
     F -- write p1-1 --> P1 -- read p1-0 --> P
     P -- write p2-1 --> P2 -- read p2-0 --> F
  ```
-
-## Contexte :
-
-Durant notre licence en informatique, nous avons réalisé en binôme ce projet en langage en C, exécuté en ligne de commande. 
-
-
-## Outils 
-Le C montre les bases bas niveau (sockets, mémoire, protocole).
-
-
-Le Java montre que tu sais industrialiser un service réseau. 👉 Présente ça comme : « même logique protocolaire, autre stack, plus orientée production ».
-
-
-- Java 17
-- Spring Boot
-- API REST (consultation / réservation)
-- Spring Boot (meilleur pour le web)
-- architecture, API REST, config propre
-Stack simple et propre :
-
-
-Pas forcément de DB au début (ou H2)
-- Hébergement (Render / / ) 
-Très simple
-Supporte Spring Boot 👉 le plus recommandé pour toi
-🟡 Railway (
-
-- Fly.io (Très bon mais quotas)
-
-
-
-## Etape 1 : Mise en place en place d'une 1 ère communication client-serveur avec une communication inter-processus 
-
-```mermaid
-
-sequenceDiagram
-    participant C as Client (Fils)
-    participant S as Serveur (Père)
-    C->>S: ID Spectacle (Consultation)
-    S->>C: Nb Places restantes
-    C->>S: ID + Nb Places (Réservation)
-    Note over S: Mise à jour tableau
-    S->>C: Statut (SUCCES/ECHEC)
-```
 
 
     
