@@ -92,15 +92,9 @@ participant ThreadA
 participant SEM
 participant Base
 
-ClientA->>Serveur: requete
-Serveur->>ThreadA: pthread_create
-ThreadA->>SEM: sem_wait()
-SEM-->>ThreadA: accès autorisé
-ThreadA->>Base: lecture/modification places[]
-ThreadA->>SEM: sem_post()
-ThreadA->>Serveur: envoie réponse
-Serveur->>ClientA: réponse
-```
+C``
+
+
 ```mermaid
 flowchart LR
 
