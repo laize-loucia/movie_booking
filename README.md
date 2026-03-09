@@ -101,8 +101,8 @@ participant Serveur
 participant ThreadA
 participant SEM
 participant Base
+```
 
-C``
 
 
 ```mermaid
