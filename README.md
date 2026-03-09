@@ -21,6 +21,25 @@ sequenceDiagram
 
 
 ```mermaid
+graph LR
+    subgraph Client
+    F[Processus Fils]
+    end
+    
+    subgraph Pipes
+    P1[Tube P1: Requêtes]
+    P2[Tube P2: Réponses]
+    end
+    
+    subgraph Serveur
+    P[Processus Père]
+    end
+    
+    F -- write p1-1 --> P1 -- read p1-0 --> P
+    P -- write p2-1 --> P2 -- read p2-0 --> F
+ ```
+
+```mermaid
 
 sequenceDiagram
     participant C as Client (Fils)
@@ -36,9 +55,25 @@ Communication interprocessus entre un client et un serveur simple pour accomplir
 
 # Communcation par Files de Messages 
 
+## Etape 2 : Implémentation des threads
+
+
+Après avoir mise en place ue communication inter-processus par tubes avec des processus lourds, nous avons utilisées des threads pour répondre
+à de nouvelles contraintes du cahier des charges de l'exercice.
+
+L'avantage des threads est en effet la mémoire partagée qui permet aux processus de commmuniquer directement et rapidement sans objets complexes.
+Cela nou a permis de simplifier l'échange de données par rapport à la première implémentation et première version que nous avions avec un échange avec un client et un serveur fils et père échangeant avec les tubes.
+
+Ici, nous n'avons pas eu besoin de copie; En effet, chaque fichier a directement pris un rôle de client et de serveur en envoyant et réceptionnant les données dans une **communication bidirectionnelle**.
+
+
 
 
 # Communcation multithread avec Files de Messages 
+
+## Etape 3 : Traitement avec des threads spécialisés pour la consultation et la réservation
+
+Inconvénient : nécessite synchronisation (sémaphores).
 
 
 
@@ -144,45 +179,6 @@ flowchart LR
 
 ```
     
-
-```mermaid
-graph LR
-    subgraph Client
-    F[Processus Fils]
-    end
-    
-    subgraph Pipes
-    P1[Tube P1: Requêtes]
-    P2[Tube P2: Réponses]
-    end
-    
-    subgraph Serveur
-    P[Processus Père]
-    end
-    
-    F -- write p1-1 --> P1 -- read p1-0 --> P
-    P -- write p2-1 --> P2 -- read p2-0 --> F
- ```
-
-
-    
-## Etape 2 : Implémentation des threads
-
-
-Après avoir mise en place ue communication inter-processus par tubes avec des processus lourds, nous avons utilisées des threads pour répondre
-à de nouvelles contraintes du cahier des charges de l'exercice.
-
-L'avantage des threads est en effet la mémoire partagée qui permet aux processus de commmuniquer directement et rapidement sans objets complexes.
-Cela nou a permis de simplifier l'échange de données par rapport à la première implémentation et première version que nous avions avec un échange avec un client et un serveur fils et père échangeant avec les tubes.
-
-Ici, nous n'avons pas eu besoin de copie; En effet, chaque fichier a directement pris un rôle de client et de serveur en envoyant et réceptionnant les données dans une **communication bidirectionnelle**.
-
-
-## Etape 3 : Manipulation des threads
-
-
-Inconvénient : nécessite synchronisation (sémaphores).
-
 
 ## Etape 4 : Synchronisation des threads
 
