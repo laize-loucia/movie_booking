@@ -78,6 +78,8 @@ Inconvénient : nécessite synchronisation (sémaphores).
 
 
 # Communcation multithread verrouillée par un Sémaphore
+## Etape 4 : Synchronisation des threads
+
 
 ```mermaid
 flowchart TB
@@ -179,90 +181,6 @@ flowchart LR
 
 ```
     
-
-## Etape 4 : Synchronisation des threads
-
-
-## use cases
-
-
-```mermaid
-sequenceDiagram
-    participant Client as MCP Client
-    participant Server as MCP Server
-    
-    Note over Client: Initialize Client
-    
-    Client->>+Server: HTTP POST /mcp (Initialize Request)
-    Note over Server: Create new transport<br/>Generate session ID
-    Server-->>-Client: HTTP 200 OK (with session ID)
-    
-    Note over Client: Store session ID
-    
-    Client->>+Server: HTTP GET /mcp (SSE Connection with session ID)
-    Note over Server: Establish SSE stream
-    Server-->>-Client: SSE: Connection established notification
-    
-    Note over Client,Server: SSE Stream is now active for server-to-client notifications
-    
-    Client->>+Server: HTTP POST /mcp (List Tools Request)
-    Note over Server: Process request
-    Server-->>-Client: HTTP 200 OK (Available Tools)
-    
-    Note over Client: Store available tools
-    
-    Client->>+Server: HTTP POST /mcp (Call Tool: single-greet)
-    Note over Server: Process tool call
-    Server-->>-Client: HTTP 200 OK (Single Greeting Response)
-    
-    Client->>+Server: HTTP POST /mcp (Call Tool: multi-greet)
-    Note over Server: Process tool call
-    
-    Server-->>Client: SSE: First greeting notification
-    Note over Server: Wait 1 second
-    Server-->>Client: SSE: Second greeting notification
-    Note over Server: Wait 1 second
-    
-    Server-->>-Client: HTTP 200 OK (Final Greeting Response)
-    Server-->>Client: SSE: Streaming complete notification
-    
-    Client->>+Server: HTTP POST /mcp (Close Connection)
-    Note over Server: Clean up resources
-    Server-->>-Client: HTTP 200 OK (Connection Closed)
-
-```
-
-Plus “systèmes”, un peu plus technique (bien vu pour ton profil)
-➡️ Render + Docker = énorme bonus DevOps.
-
-4️⃣ Ce que ça montre pour les masters
-Ça coche EXACTEMENT leurs attentes :
-
-Réseau (client/serveur)
-Systèmes (C)
-Architecture applicative (Spring)
-Déploiement (Docker + hébergeur)
-Démarche personnelle (très apprécié)
-👉 Dans ton dossier :
-
-« Projet initial en C (client/serveur). Reprise volontaire en Java Spring Boot pour exposer le service via API REST et déploiement sur plateforme cloud. »
-
-
-➡️ Fais-le en 2 étapes
-
-### Etape 1 : Java Spring Boot local
-
-
-
-### Etape 2 : Déploiement Render (+ Docker si possible)
-
-l’architecture exacte
-le plan de repo GitHub
-
-
-### COnclusion
-J'ai repris ce projet en Java Spring Boot pour exposer le service via API REST et le déploier une vraie plateformer afin de le tester en condititon réelle.
-
 
 ## Sources
 
