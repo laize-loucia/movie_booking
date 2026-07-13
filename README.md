@@ -1,6 +1,6 @@
 ## Projet
 
-Durant notre licence en informatique, nous avons réalisé en binôme ce projet en langage en C, exécuté en ligne de commande. 
+Durant notre licence en informatique, j'ai rélaisé une application CLI en binôme en langage en C. 
 
 Nous avons utilisé 3 outils de communication différents ce qui nous a permis de comprendre et prendre du recul sur quels mécanismes mettre en oeuvre lors des interactions client serveur.
 &nbsp;
