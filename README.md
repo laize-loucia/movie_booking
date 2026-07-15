@@ -5,7 +5,7 @@ J'ai utilisé 3 outils de communication différents, ce qui m'a permis de compre
 
 ## Architecture commune
 
-Chacunes des versions repose sur l'architecture suivante :  
+Chacunes des versions suit cette architecture:  
 
 ```mermaid
 sequenceDiagram
