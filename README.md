@@ -1,6 +1,6 @@
-## Projet
+## Réservation de Films (Janvier - Avril 2026)
 
-Durant notre licence en informatique, j'ai rélaisé une application CLI en binôme en langage en C. 
+Durant notre licence en informatique, j'ai rélaisé une application CLI en binôme en CLI. 
 
 Nous avons utilisé 3 outils de communication différents ce qui nous a permis de comprendre et prendre du recul sur quels mécanismes mettre en oeuvre lors des interactions client serveur.
 &nbsp;
