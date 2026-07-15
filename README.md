@@ -1,10 +1,11 @@
-## Réservation de Films (Janvier - Avril 2026)
+# Réservation de Films (Janvier - Avril 2026)
 
-Application CLI réalisé en binôme lors de 3ème année de licence informatique.  
-J'ai utilisé 3 outils de communication différents ce qui m'a permis de comprendre les mécanismes mettre en oeuvre lors des interactions client serveur.  
+Application CLI réalisé en binôme en 3ème année de licence informatique.  
+J'ai utilisé 3 outils de communication différents, ce qui m'a permis de comprendre quels mécanismes mettre en oeuvre lors des interactions client serveur.  
 
-Chacunes des versions repose sur l'architecture suivante :
+## Architecture commune
 
+Chacunes des versions repose sur l'architecture suivante :  
 
 ```mermaid
 sequenceDiagram
@@ -12,7 +13,8 @@ sequenceDiagram
     Client_1 Client_2->>Server: Envoi une requête (consultation, réservation)
     Server-->>Client_1 Client_2: Répond à la requête
 ```
-# Commandes
+## Commandes
+
 
 ``` gcc serveur.c -o serveur ```
 
