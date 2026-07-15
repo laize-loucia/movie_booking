@@ -1,11 +1,10 @@
 ## Réservation de Films (Janvier - Avril 2026)
 
-Durant notre licence en informatique, j'ai rélaisé une application CLI en binôme en CLI. 
+Application CLI réalisé en binôme lors de 3ème année de licence informatique.  
+J'ai utilisé 3 outils de communication différents ce qui m'a permis de comprendre les mécanismes mettre en oeuvre lors des interactions client serveur.  
 
-Nous avons utilisé 3 outils de communication différents ce qui nous a permis de comprendre et prendre du recul sur quels mécanismes mettre en oeuvre lors des interactions client serveur.
-&nbsp;
+Chacunes des versions repose sur l'architecture suivante :
 
-Chacunes des versions repose sur le modèle suivant :
 
 ```mermaid
 sequenceDiagram
@@ -13,10 +12,7 @@ sequenceDiagram
     Client_1 Client_2->>Server: Envoi une requête (consultation, réservation)
     Server-->>Client_1 Client_2: Répond à la requête
 ```
-
 # Commandes
-
-
 
 ``` gcc serveur.c -o serveur ```
 
